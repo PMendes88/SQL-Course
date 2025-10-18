@@ -52,7 +52,8 @@ Here's the breakdown of the top data analyst jobs in 2023:
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specialisations within data analytics.
 
 
-![Top Paying Roles](assets\1_top_10_highest_paying_job_titles.png)*Bar graph visualising the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+![Top Paying Roles](assets\1_top_10_highest_paying_job_titles.png)
+*Bar graph visualising the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
 
 
 
@@ -83,15 +84,17 @@ INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY salary_year_avg DESC
 ```
-Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023:
+Analysing the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023 we can clearly see some trends:
 - **SQL** is leading with a bold count of 8.
 - **Python** follows closely with a count of 7.
 - **Tableau** is also highly sought after, with a count of 6.
 Other skills like **R**, **Snowflake**, **Pandas**, and **Excel** show varying degrees of demand.
 
-![Top Paying Skills](assets\2_top_10_highest_paying_skills.png)*Bar graph visualising the top 10 skills for data analysts; ChatGPT generated this graph from my SQL query results*
+![Top Paying Skills](assets\2_top_10_highest_paying_skills.png)
+*Bar graph visualising the top 10 skills for data analysts; ChatGPT generated this graph from my SQL query results*
 
 ### 3. Top In-Demand Skills
+So, what are the top demanded skills for data analyst roles?
 
 ```sql
 SELECT
@@ -107,9 +110,13 @@ GROUP BY skills
 ORDER BY demand_count DESC
 LIMIT 5
 ```
-![Top Paying Roles](assets\top_10_highest_paying_skills.png)*Bar graph visualising the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
+- As shown, **SQL** clearly dominates the stage with the highest ammount of job postings asking for it, while **Excel** still goes strong in second, followed by **Python** in third and in fourth and fifth place the two most well-known visualisation tools, **Tableau** and **Power B.I.**.
+
+![Top Demand Skills](assets\3_top_demand_skills.png)
+*Bar graph visualising the top demanded skills for data analyst postings; ChatGPT generated this graph from my SQL query results*
 
 ### 4. Top Paying Skills
+Looking at the average salary in all data jobs, what are the top paying skills that one should look out for in order to maximize personal revenue?
 
 ```sql
 SELECT
@@ -126,8 +133,23 @@ GROUP BY skills
 ORDER BY avg_salary DESC
 LIMIT 25
 ```
+The values range from around $150,000 to over $200,000 — placing these firmly in the top percentile of data-related roles.
+
+- **PySpark** leads by quite a significant margin ($19K above the next skill), indicating the high demand for big data processing and distributed computing expertise.
+
+- **Bitbucket**, primarily a DevOps and version control tool, coming in second suggests that data engineering workflows and CI/CD integration are valued skills within data analytics teams.
+
+- **Couchbase** and **Watson** reflect the rise of NoSQL databases and AI/ML integration respectively.
+
+- **DataRobot**, an automated machine learning platform, rounds out the top five — showing employers reward familiarity with automation and model deployment tools.
+
+Other skills are shown for elucidation purposes and for us to be able to place a reasonable minimum and maximum average salary value comparison by skill.
+
+![Top Paying Skills](assets\4_top_paying_skills.png)
+*Bar graph visualising the top demanded skills for data analyst postings; ChatGPT generated this graph from my SQL query results*
 
 ### 5. Optimal Skills
+In order to "min-max" the search for the perfect job in terms of both skill demand AND average salary we need to go deeper...
 
 ```sql
 WITH skills_demand AS (
@@ -170,6 +192,23 @@ ORDER BY
     demand_count DESC
 LIMIT 25
 ```
+We can see that hybrid profiles are clearly in the win here. Skills that bridge software engineering (**Go**) and cloud analytics (**Snowflake, Azure**) tend to command higher salaries and demand.
+
+Employers value candidates who can operate both traditional big data systems such as **Hadoop** and modern cloud-native tools like **Snowflake**.
+
+The inclusion of **Confluence** shows that collaboration and documentation platforms are essential to large-scale data projects.
+
+Career takeaway: For professionals aiming to maximize employability, learning **Snowflake** or **Azure** offers the best mix of high demand and stable salary, while adding **Go** could significantly raise earning potential in the long run.
+
+|skills    |demand_count| avg_salary|
+|:--------:|:----------:|:---------:|
+|  go      |    27      |   115320  |
+|confluence|	11      |	114210  |
+|hadoop    |	22      |	113193  |
+|snowflake |	37      |	112948  |
+|azure     |	34      |	111225  |
+
+
 
 # What I Learned
 Throughout this adventure I've turbocharged my SQL toolkit with some serious firepower:
@@ -189,6 +228,6 @@ From the analysis, several general insights emerged:
 4. **Skills With Higher Salaries:** Specialised skills, such as SVN and Solidity, are associated with the highest average salaries, indicating a premium on niche expertise.
 5. **Optimal Skills for Job Market Value:** SQL leads in demand and offers for a high average salary, positioning it as one of the most optimal skills for data analysts to learn to maximise their market value.
 
-### CLosing Thoughts
+### Closing Thoughts
 
 This project enhanced my SQL skills and provided valuable insights into the data analyst job market. The findings from the analysis serve as a guide to prioritizing skill development and job search efforts. Aspiring data analysts can better position themselves in a competitive job market by focusing on high-demand, high salary skills. This exploration highlights the importance of continuous learning and adaptation to emerging trends in the field of data analytics.
