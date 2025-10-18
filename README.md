@@ -90,7 +90,7 @@ Analysing the breakdown of the most demanded skills for the top 10 highest payin
 - **Tableau** is also highly sought after, with a count of 6.
 Other skills like **R**, **Snowflake**, **Pandas**, and **Excel** show varying degrees of demand.
 
-![Top Paying Skills](assets\2_top_10_highest_paying_skills.png)
+![Top Paying Skills](assets/2_top_10_highest_paying_skills.png)
 *Bar graph visualising the top 10 skills for data analysts; ChatGPT generated this graph from my SQL query results*
 
 ### 3. Top In-Demand Skills
@@ -112,7 +112,7 @@ LIMIT 5
 ```
 - As shown, **SQL** clearly dominates the stage with the highest ammount of job postings asking for it, while **Excel** still goes strong in second, followed by **Python** in third and in fourth and fifth place the two most well-known visualisation tools, **Tableau** and **Power B.I.**.
 
-![Top Demand Skills](assets\3_top_demand_skills.png)
+![Top Demand Skills](assets/3_top_demand_skills.png)
 *Bar graph visualising the top demanded skills for data analyst postings; ChatGPT generated this graph from my SQL query results*
 
 ### 4. Top Paying Skills
@@ -145,7 +145,7 @@ The values range from around $150,000 to over $200,000 — placing these firmly 
 
 Other skills are shown for elucidation purposes and for us to be able to place a reasonable minimum and maximum average salary value comparison by skill.
 
-![Top Paying Skills](assets\4_top_paying_skills.png)
+![Top Paying Skills](assets/4_top_paying_skills.png)
 *Bar graph visualising the top demanded skills for data analyst postings; ChatGPT generated this graph from my SQL query results*
 
 ### 5. Optimal Skills
